@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do You Love Me?</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+  }
+  #yesButton{
+    background-color: #fff;
+  }
+  button {
+    font-size: 18px;
+    background-color: red;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  #name h1 {
+     margin-top: 70px;
+     position: absolute;
+     top: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     left: 50%;
+     transform: translate(-50%,-50%);
+  }
+  
+</style>
+</head>
+<body>
+<div id="name"><h1>I am raja</h1></div>
+<h1>Hii annnny Do you love me?</h1>
+
+<button id="yesButton" onclick="showLove()">Yes</button>
+<button id="noButton" onmouseover="moveButton()">No</button>
+
+<script>
+function showLove() {
+  alert("Yes I love you too mera baby ❤️❤️");
+}
+
+function moveButton() {
+  var button = document.getElementById('noButton');
+  var xPos = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth));
+  var yPos = Math.floor(Math.random() * (window.innerHeight - button.offsetHeight));
+  button.style.position = "absolute";
+  button.style.left = xPos + "px";
+  button.style.top = yPos + "px";
+}
+</script>
+
+</body>
+</html>
